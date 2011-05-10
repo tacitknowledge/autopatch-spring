@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.tacitknowledge.autopatch</groupId>
+  <artifactId>tk-autopatch-optional-spring</artifactId>
+  <version>1.1.0</version>
+
+  <name>AutoPatch Spring</name>
+  <description>An automated Java patching system - Spring module</description>
+  <url>https://github.com/tacitknowledge/autopatch-spring</url>
+
+  <organization>
+    <name>Tacit Knowledge</name>
+    <url>http://www.tacitknowledge.com</url>
+  </organization>
+
+  <developers>
+    <developer>
+        <id>scottfromsf</id>
+        <name>Scott Askew</name>
+        <email>scott at tacitknowledge.com</email>
+        <organization>Tacit Knowledge</organization>
+    </developer>
+    <developer>
+        <id>mikehardy</id>
+        <name>Mike Hardy</name>
+        <email>mikehardy at tacitknowledge.com</email>
+        <organization>Tacit Knowledge</organization>
+    </developer>
+  </developers>
+
+  <!-- TODO: Remove the remote repository reference once AutoPatch is in the Apache Common repo -->
+  <repositories>
+    <repository>
+    <id>tk-public</id>
+    <name>TK Public Repository</name>
+    <url>http://repo1.tacitknowledge.com/repository/public</url>
+    <layout>default</layout>
+    <snapshots>
+      <enabled>false</enabled>
+    </snapshots>
+    <releases>
+      <enabled>true</enabled>
+    </releases>
+    </repository>
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.1.2</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.tacitknowledge.autopatch</groupId>
+      <artifactId>tk-autopatch</artifactId>
+      <version>[1.1,)</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+  </dependencies>
+
+</project>
