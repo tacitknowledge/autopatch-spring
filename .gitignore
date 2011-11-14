@@ -1,1 +1,13 @@
+.checkstyle
+.project
+.clover
+.settings
+bin
+build
+dist
 target
+*.iml
+*.ipr
+*.iws
+.idea
+*.externalToolBuilders
